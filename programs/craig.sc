@@ -1,1 +1,9 @@
-print(volume(-99793, 235, -99746, -99798, 224, -99755, !air(_)) + '/' + (abs(x2 - x1) + 1) * (abs(y2 - y1) + 1) * (abs(z2 - z1) + 1))
+__config() -> {
+  'commands' -> {
+    '<from> <to>' -> _(from, to) -> print(volume(from, to, !air(_)) + '/' + (abs(from[0] - to[0]) + 1) * (abs(from[1] - to[1]) + 1) * (abs(from[2] - to[2]) + 1)),
+  },
+  'arguments' -> {
+    'from' -> {'type' -> 'pos'},
+    'to' -> {'type' -> 'pos'},
+  },
+};
